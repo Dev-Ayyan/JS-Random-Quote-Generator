@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+  </head>
+  <body>
+    <h1>Random Qoute Generator</h1>
+
+    <button id="quoteGen">Generate a Quote!</button>
+
+    <div id="quotes"></div>
+    <div id="authorName"></div>
+
+    <script>
+      let quotes = [
+        "Insane means fewer cameras!",
+        "Her name badge read: Hello! My name is DIE, DEMIGOD SCUM!",
+        "“That proves you are unusual and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”",
+        "“I'm unpredictable, I never know where I'm going until I get there, I'm so random, I'm always growing, learning, changing, I'm never the same person twice. But one thing you can be sure of about me; is I will always do exactly what I want to do.”",
+        "“You are the shuckiest shuck faced shuck in the world!”",
+      ];
+      const quoteBtn = document.getElementById("quoteGen");
+      const quoteDiv = document.getElementById("quotes");
+      const generateQuote = () => {
+        const randomElem = quotes[Math.floor(Math.random() * quotes.length)];
+        console.log(randomElem);
+        quoteDiv.innerHTML = `${randomElem}`;
+      };
+
+      quoteBtn.addEventListener("click", generateQuote);
+    </script>
+  </body>
+</html>
